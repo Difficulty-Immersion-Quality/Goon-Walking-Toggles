@@ -18,24 +18,24 @@
         <node id="ModuleInfo">
           <attribute id="Author" type="LSString" value="Goonsack" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSString" value="Toggle passives to reduce party movement speed and set animations to walk and stroll." />
-          <attribute id="Folder" type="LSString" value="Goon's Walking Toggles" />
+          <attribute id="Description" type="LSString" value="Adds 3 toggles to all party members that control movement speed; Walk, Stroll, and Immunity. Cleanly implemented, convenient to use, perfect for RP and sigma walking through the druid grove on your way to mog Kagha — ongfr no cap." />
+          <attribute id="Folder" type="LSString" value="Goon's Movement Toggles" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
           <attribute id="MD5" type="LSString" value="" />
           <attribute id="MainMenuBackgroundVideo" type="FixedString" value="" />
           <attribute id="MenuLevelName" type="FixedString" value="" />
-          <attribute id="Name" type="FixedString" value="Goon's Walking Toggles" />
+          <attribute id="Name" type="FixedString" value="Goon's Movement Toggles - Relaxing Walks and Leisurely Strolls" />
           <attribute id="NumPlayers" type="uint8" value="4" />
           <attribute id="PhotoBooth" type="FixedString" value="" />
           <attribute id="StartupLevelName" type="FixedString" value="" />
           <attribute id="Tags" type="LSString" value="" />
           <attribute id="Type" type="FixedString" value="Add-on" />
           <attribute id="UUID" type="FixedString" value="fd0d4a51-c986-4006-b782-f135aaef780d" />
-          <attribute id="Version64" type="int64" value="36028797018963968" />
+          <attribute id="Version64" type="int64" value="36169534507319296" />
           <children>
             <node id="PublishVersion">
-              <attribute id="Version64" type="int64" value="36028797018963968" />
+              <attribute id="Version64" type="int64" value="36169534507319296" />
             </node>
             <node id="Scripts" />
             <node id="TargetModes">
