@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contentList>
-	<!--  -->
-    <content contentuid="" version="1"></content>
+	<!-- "Movement: Walk" -->
+    <content contentuid="h508d0d61g26cbg4c3fg8129gde9e15ffb750" version="1">Toggle Movement: Walk</content>
+    <content contentuid="h0ad5a6eag6f53g4e3bgbd06gf0114fbb867d" version="1">You don't have anywhere to be, right?&lt;br&gt;&lt;br&gt;Sets the party's movement speed to a relaxing walk.</content>
+
+	<!-- "Goon_WalkingToggle_Stroll" -->
+    <content contentuid="h08e842dcgda38g4ac6ga911g77bb76468732" version="1">Toggle Movement: Stroll</content>
+    <content contentuid="ha02b552agdb83g4f4agafd3g1471e9daf4c7" version="1">You definitely don't have anywhere to be.&lt;br&gt;&lt;br&gt;Sets the party's movement speed to a leisurely stroll.</content>
+
+	<!-- "Goon_WalkingToggle_Immunity", "GOON_WALKINGTOGGLE_IMMUNITY" -->
+    <content contentuid="hf4bc019dgfff9g4bbfgafb5g8a56f87b7565" version="1">Toggle Movement: Immunity</content>
+    <content contentuid="h594223e0g66e6g4a12g92c3g3914c8dde192" version="1">Your party might be taking it slow, but you've got better things to do!&lt;br&gt;&lt;br&gt;Exempts the party member from the &lt;LSTag Type="Passive" Tooltip="Goon_WalkingToggle_Walk"&gt;Walk&lt;/LSTag&gt; and &lt;LSTag Type="Passive" Tooltip="Goon_WalkingToggle_Stroll"&gt;Stroll&lt;/LSTag&gt; toggles.</content>
 </contentList>

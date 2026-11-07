@@ -1,0 +1,54 @@
+// ==================================== Walk ====================================
+// BoostConditions was hella weird in letting the boost seemingly fire and then get corrected afterwards.
+// The immunity status would be present, but walking through a paladin aura would trigger context and hitch the character for a moment.
+// Issue not present by just doing an IF directly in the Boosts line.
+
+new entry "Goon_WalkingToggle_Walk"
+type "PassiveData"
+// // Toggle Movement: Walk
+data "DisplayName" "h508d0d61g26cbg4c3fg8129gde9e15ffb750;1"
+// // You don't have anywhere to be, right?&lt;br&gt;&lt;br&gt;Sets the party's movement speed to a relaxing walk.
+data "Description" "h0ad5a6eag6f53g4e3bgbd06gf0114fbb867d;1"
+data "Icon" "PassiveFeature_LandsStride_DifficultTerrain"
+data "Properties" "IsToggled;ToggleForParty"
+data "ToggleGroup" "Goon_WalkingToggle"
+data "BoostContext" "OnCreate;OnStatusApplied;OnStatusRemoved;OnMovedDistance"
+// data "BoostConditions" "Goon_WalkingToggleConditions()"
+data "Boosts" "IF(Goon_WalkingToggleConditions()):MovementSpeedLimit(Walk)"
+
+// ==================================== Stroll ====================================
+
+new entry "Goon_WalkingToggle_Stroll"
+type "PassiveData"
+using "Goon_WalkingToggle_Walk"
+// // Toggle Movement: Stroll
+data "DisplayName" "h08e842dcgda38g4ac6ga911g77bb76468732;1"
+// // You definitely don't have anywhere to be.&lt;br&gt;&lt;br&gt;Sets the party's movement speed to a leisurely stroll.
+data "Description" "ha02b552agdb83g4f4agafd3g1471e9daf4c7;1"
+data "Boosts" "IF(Goon_WalkingToggleConditions()):MovementSpeedLimit(Stroll)"
+
+// ==================================== Immunity ====================================
+
+new entry "Goon_WalkingToggle_Immunity"
+type "PassiveData"
+type "PassiveData"
+// // Toggle Movement: Immunity
+data "DisplayName" "hf4bc019dgfff9g4bbfgafb5g8a56f87b7565;1"
+// // Your party might be taking it slow, but you've got better things to do!&lt;br&gt;&lt;br&gt;Exempts the party member from the &lt;LSTag Type="Passive" Tooltip="Goon_WalkingToggle_Walk"&gt;Walk&lt;/LSTag&gt; and &lt;LSTag Type="Passive" Tooltip="Goon_WalkingToggle_Stroll"&gt;Stroll&lt;/LSTag&gt; toggles.
+data "Description" "h594223e0g66e6g4a12g92c3g3914c8dde192;1"
+data "Properties" "IsToggled"
+data "Icon" "PassiveFeature_FastMovement"
+data "ToggleOnFunctors" "ApplyStatus(GOON_WALKINGTOGGLE_IMMUNITY,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(GOON_WALKINGTOGGLE_IMMUNITY)"
+
+new entry "GOON_WALKINGTOGGLE_IMMUNITY"
+type "StatusData"
+data "StatusType" "BOOST"
+// // Toggle Movement: Immunity
+data "DisplayName" "hf4bc019dgfff9g4bbfgafb5g8a56f87b7565;1"
+// // Your party might be taking it slow, but you've got better things to do!&lt;br&gt;&lt;br&gt;Exempts the party member from the &lt;LSTag Type="Passive" Tooltip="Goon_WalkingToggle_Walk"&gt;Walk&lt;/LSTag&gt; and &lt;LSTag Type="Passive" Tooltip="Goon_WalkingToggle_Stroll"&gt;Stroll&lt;/LSTag&gt; toggles.
+data "Description" "h594223e0g66e6g4a12g92c3g3914c8dde192;1"
+data "StackId" "GOON_WALKINGTOGGLE_IMMUNITY"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator;IgnoreResting;ApplyToDead"
+data "RemoveEvents" "OnStatusApplied"
+data "RemoveConditions" "not HasPassive('Goon_WalkingToggle_Immunity', context.Source)"

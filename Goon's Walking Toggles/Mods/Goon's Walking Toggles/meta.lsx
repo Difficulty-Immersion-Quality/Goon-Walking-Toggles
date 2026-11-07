@@ -8,7 +8,7 @@
         <node id="ModuleInfo">
           <attribute id="Author" type="LSString" value="Goonsack" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
-          <attribute id="Description" type="LSString" value="Toggle to reduce movement speed and set animations to walk and stroll." />
+          <attribute id="Description" type="LSString" value="Toggle passives to reduce party movement speed and set animations to walk and stroll." />
           <attribute id="Folder" type="LSString" value="Goon's Walking Toggles" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />

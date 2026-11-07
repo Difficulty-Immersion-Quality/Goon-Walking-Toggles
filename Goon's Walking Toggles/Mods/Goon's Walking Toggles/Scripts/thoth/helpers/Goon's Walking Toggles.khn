@@ -1,0 +1,9 @@
+function Goon_WalkingToggleConditions(source)
+    source = source or context.Source
+
+    if HasStatus('GOON_WALKINGTOGGLE_IMMUNITY', source).Result then
+        return ConditionResult(false)
+    end
+
+    return Goon_IsPlayerInControl(source)
+end
